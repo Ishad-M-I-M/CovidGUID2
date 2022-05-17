@@ -19,9 +19,9 @@ class Database
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
 
-    public function applyMigrations()
+    public function applyMigrations(string $dbname)
     {
-        $this->createDatabase();
+        $this->createDatabase($dbname);
         $this->createMigrationTable();
         $appliedMigrations =  $this->getAppliedMigrations();
 
@@ -55,9 +55,9 @@ class Database
 
     }
 
-    public function createDatabase(){
-        $this->pdo->exec("CREATE DATABASE IF NOT EXISTS covidguide");
-        $this->pdo->exec("USE covidguide");
+    public function createDatabase(string $dbname){
+        $this->pdo->exec("CREATE DATABASE IF NOT EXISTS ".$dbname);
+        $this->pdo->exec("USE ".$dbname);
     }
 
     public function createMigrationTable()

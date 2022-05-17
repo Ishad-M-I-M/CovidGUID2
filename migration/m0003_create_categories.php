@@ -6,9 +6,9 @@ class m0003_create_categories
     {
         $db = \app\core\App::$app->db;
         $SQL = "CREATE TABLE IF NOT EXISTS `categories` (
-                `cat_id` int(3) NOT NULL AUTO_INCREMENT,
+                `cat_id` int NOT NULL AUTO_INCREMENT,
                 `cat_title` varchar(255) NOT NULL,
-                `cat_status` int(1) NOT NULL,
+                `cat_status` int NOT NULL,
                 `category_description` varchar(255) NOT NULL, 
                 PRIMARY KEY (`cat_id`)
                 ) ENGINE = INNODB;";

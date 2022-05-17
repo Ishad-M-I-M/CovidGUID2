@@ -13,9 +13,9 @@ class Request
 
     public function __construct()
     {
-        $this->request_uri = $_SERVER['REQUEST_URI'];
+        $this->request_uri = $_SERVER['REQUEST_URI'] ?? '';
         $this->path = $this->fetchPath();
-        $this->method = strtolower($_SERVER['REQUEST_METHOD']);
+        $this->method = strtolower($_SERVER['REQUEST_METHOD'] ?? '');
         $this->body = $this->fetchBody();
     }
 
