@@ -8,16 +8,16 @@ use app\core\App;
 use app\models\User;
 
 require_once __DIR__ . '/../vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
-$dotenv->load();
+//$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+//$dotenv->load();
 
 
 $config = [
     'userClass' => User::class,
     'db' => [
-        'dsn' => $_ENV['DB_DSN'].'dbname='.$_ENV['DB_NAME'].';',
-        'user' => $_ENV['DB_USER'],
-        'password' => $_ENV['DB_PASSWORD']
+        'dsn' => getenv('DB_DSN').'dbname='.getenv('DB_NAME').';',
+        'user' => getenv('DB_USER'),
+        'password' => getenv('DB_PASSWORD')
     ]
 ];
 
