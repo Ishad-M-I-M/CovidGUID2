@@ -9,7 +9,7 @@ class m0004_create_guideline
         $SQL = "CREATE TABLE IF NOT EXISTS `guidelines` (
                   `guid_id` int NOT NULL AUTO_INCREMENT,
                   `sub_category_id` int NOT NULL,
-                  `guidline` text NOT NULL,
+                  `guideline` text NOT NULL,
                   `guid_status` TEXT NOT NULL ,                  
                   `activate_date` DATE NOT NULL,
                   `expiry_date` DATE NOT NULL,
