@@ -15,7 +15,7 @@ use app\models\Guideline;
 use app\models\LoginForm;
 use app\models\Notification;
 use app\models\proxy\CategoryProxy;
-use app\models\proxy\SubcategoryProxy;
+use app\models\proxy\SubCategoryProxy;
 use app\models\SubCategory;
 
 class OfficerController1 extends Controller
@@ -202,7 +202,7 @@ class OfficerController1 extends Controller
                 exit();
             }
 
-            return $this->render('officer_add_subcategory', ['model' => SubcategoryProxy::getById($_GET['edit_id'])->getSubcategoryObject()]);
+            return $this->render('officer_add_subcategory', ['model' => SubCategoryProxy::getById($_GET['edit_id'])->getSubcategoryObject()]);
         }
 
         if (isset($_GET['delete_id'])) {

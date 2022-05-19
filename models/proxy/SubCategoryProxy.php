@@ -5,7 +5,7 @@ namespace app\models\proxy;
 use app\core\App;
 use app\models\SubCategory;
 
-class SubcategoryProxy
+class SubCategoryProxy
 {
     private string $sub_category_id;
     private string $sub_category_name;
@@ -44,7 +44,7 @@ class SubcategoryProxy
     }
 
     /**
-     * @return SubcategoryProxy[]
+     * @return SubCategoryProxy[]
      */
     public static function getAll()
     {
@@ -59,7 +59,7 @@ class SubcategoryProxy
 
     /**
      * @param $where
-     * @return SubcategoryProxy[]
+     * @return SubCategoryProxy[]
      */
     public static function getAllWhere($where)
     {
@@ -79,7 +79,7 @@ class SubcategoryProxy
 
     /**
      * @param $id string
-     * @return SubcategoryProxy
+     * @return SubCategoryProxy
      */
     public static function getById(string $id)
     {

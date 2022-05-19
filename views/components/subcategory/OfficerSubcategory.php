@@ -3,7 +3,7 @@
 namespace app\views\components\subcategory;
 
 use app\models\proxy\CategoryProxy;
-use app\models\proxy\SubcategoryProxy;
+use app\models\proxy\SubCategoryProxy;
 
 class OfficerSubcategory extends Subcategory
 {
@@ -28,8 +28,8 @@ class OfficerSubcategory extends Subcategory
         ];
     }
     public static function renderAllSubCategories(string $status){
-        $subcategories = \app\models\proxy\SubcategoryProxy::getAllWhere(['sub_category_status'=>$status]);
-//        $subcategories = array_filter($subcategories,$status,function (SubcategoryProxy $subcategoryProxy,string $status){return $subcategoryProxy->getSubCategoryStatus() === $status;});
+        $subcategories = \app\models\proxy\SubCategoryProxy::getAllWhere(['sub_category_status'=>$status]);
+//        $subcategories = array_filter($subcategories,$status,function (SubCategoryProxy $SubCategoryProxy,string $status){return $SubCategoryProxy->getSubCategoryStatus() === $status;});
 
         $render = '<table class="table table-bordered table-hover">
                                 <thead>

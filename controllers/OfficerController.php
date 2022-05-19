@@ -16,7 +16,7 @@ use app\models\Guideline;
 use app\models\LoginForm;
 use app\models\Notification;
 use app\models\proxy\CategoryProxy;
-use app\models\proxy\SubcategoryProxy;
+use app\models\proxy\SubCategoryProxy;
 use app\models\SubCategory;
 
 class OfficerController extends Controller
@@ -168,7 +168,7 @@ class OfficerController extends Controller
         $subcategory = new SubCategory();
 
         if (isset($_GET['edit_id'])) {
-            $subcategory = SubcategoryProxy::getById($_GET['edit_id'])->getSubcategoryObject();
+            $subcategory = SubCategoryProxy::getById($_GET['edit_id'])->getSubcategoryObject();
             if ($request->method() === "post") {
                 $this->verifyUser($request,$response);
                 $subcategory->loadData($this->getFormData());

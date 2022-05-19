@@ -49,7 +49,7 @@
                                         <i class="fa fa-file-text fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class='huge'><?php echo sizeof(\app\models\proxy\SubcategoryProxy::getAll()) ?></div>
+                                        <div class='huge'><?php echo sizeof(\app\models\proxy\SubCategoryProxy::getAll()) ?></div>
                                         <div>Subcategories</div>
                                     </div>
                                 </div>
